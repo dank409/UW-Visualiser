@@ -51,7 +51,7 @@ const Sidebar = ({
             <Sparkles className="w-5 h-5" />
             <span className="font-medium">Advanced Courses (x4x)</span>
           </div>
-          <Toggle className="w-5 h-5" />
+          <ToggleLeft className="w-5 h-5" />
         </button>
       </div>
 
