@@ -1,5 +1,5 @@
 import React from 'react';
-import { Toggle, BookMarked, GraduationCap, Sparkles } from 'lucide-react';
+import { ToggleLeft, BookMarked, GraduationCap, Sparkles } from 'lucide-react';
 import { coursesData, isCourseUnlocked } from '../data/mockCourses';
 
 const Sidebar = ({ 
