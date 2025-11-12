@@ -93,7 +93,7 @@ const CourseGraph = ({
           id: `edge-${currentNodeId}-${parentId}`,
           source: currentNodeId,
           target: parentId,
-          type: 'smoothstep',
+          type: 'straight',
           animated: getStatus(courseCode) === 'in-progress',
           style: { 
             stroke: getStatus(courseCode) === 'completed' ? '#10b981' : 
