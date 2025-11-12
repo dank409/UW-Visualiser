@@ -162,6 +162,9 @@ const CourseGraph = ({
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         nodeTypes={nodeTypes}
+        nodesDraggable={false}
+        nodesConnectable={false}
+        elementsSelectable={true}
         fitView
         attributionPosition="bottom-left"
       >
