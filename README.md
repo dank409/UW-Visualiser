@@ -1,4 +1,4 @@
-# UW Course Prerequisite Visualizer
+# UW Visualizer (WORK IN PROGRESS)
 
 A clean, frontend-only React application that helps students visualize course prerequisites and plan their academic pathway at the University of Waterloo.
 
