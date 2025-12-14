@@ -25,7 +25,7 @@ The sidebar shows organized lists:
 - **Unlocked Now**: Courses available with your current prerequisites
 - **Unlocked Next**: Courses that will unlock after completing in-progress courses
 
-### 💾 Data Persistence
+### 💾 Data Persistence (WORK IN PROGRESS)
 
 - Course status (completed/in-progress) is automatically saved to browser localStorage
 - Progress persists across page refreshes
@@ -53,22 +53,6 @@ npm run dev
 
 The application will open in your browser at `http://localhost:3000`
 
-## Building for Production
-
-Build the application:
-
-```bash
-npm run build
-```
-
-The production build will be in the `dist` directory.
-
-Preview the production build:
-
-```bash
-npm run preview
-```
-
 ## Usage
 
 1. **Search for a Course**: Use the search bar at the top to find a course by code (e.g., "MATH 135") or title
@@ -80,28 +64,6 @@ npm run preview
 4. **Track Progress**: The sidebar automatically updates to show which courses are unlocked based on your progress
 5. **Filter Advanced Courses**: Toggle the "Show Advanced Courses" checkbox to include/exclude advanced level courses
 
-## Project Structure
-
-```
-src/
-  components/
-    CourseGraph.jsx      # ReactFlow graph visualization
-    CourseNode.jsx       # Custom node component for courses
-    CourseSearch.jsx     # Search input with dropdown
-    CourseDetails.jsx    # Modal/dialog for course details
-    Sidebar.jsx          # Sidebar with course lists
-  data/
-    mockCourses.js       # Course data with prerequisites
-  pages/
-    Dashboard.jsx        # Main page component
-  utils/
-    prerequisiteUtils.js # Helper functions for prerequisite logic
-    localStorage.js      # localStorage persistence utilities
-  App.js                 # Root component with routing
-  index.js               # Entry point
-  index.css              # Global styles
-```
-
 ## Technology Stack
 
 - **React 18+** - UI framework
@@ -111,39 +73,6 @@ src/
 - **lucide-react** - Icons
 - **Vite** - Build tool
 
-## Course Data Structure
-
-Courses in `mockCourses.js` follow this structure:
-
-```javascript
-{
-  'COURSE CODE': {
-    code: 'COURSE CODE',
-    title: 'Course Title',
-    description: 'Course description...',
-    units: 0.50,
-    prerequisites: null | string | {type: 'AND'|'OR', courses: [...]},
-    corequisites: null | string,
-    isAdvanced: boolean
-  }
-}
-```
-
-Prerequisites can be:
-- `null` - No prerequisites
-- `"MATH 135"` - Single prerequisite (string)
-- `{type: 'AND', courses: ['MATH 135', 'MATH 137']}` - Multiple AND prerequisites
-- `{type: 'OR', courses: ['MATH 135', 'MATH 145']}` - Multiple OR prerequisites
-- Nested structures for complex logic
-
 ## License
 
 MIT License - feel free to use this project for your own purposes.
-
-## Contributing
-
-This is a simplified, frontend-only version focused on core functionality. Feel free to extend it with additional features like:
-- Export/import course progress as JSON
-- Keyboard shortcuts
-- Additional course data
-- Course recommendations based on completed courses
